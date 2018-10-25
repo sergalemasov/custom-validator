@@ -18,3 +18,16 @@
   </li>
 </ul>
 
+<div *ngIf="isCustomValidatorShown" [formGroup]="formGroup">
+    <div>
+        <custom-validator [formControl]="formControl1">
+
+        </custom-validator>
+    </div>
+
+
+    <input type="text" [formControlName]="formControlName2"/>
+</div>
+
+<button (click)="toggleValidator()">Toggle validator control</button>
+
